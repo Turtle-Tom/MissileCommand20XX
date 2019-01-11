@@ -1,0 +1,9 @@
+
+.DS_STORE
+.Python
+
+missileenv/bin/*
+
+missileenv/build
+
+missileenv/lib/*
