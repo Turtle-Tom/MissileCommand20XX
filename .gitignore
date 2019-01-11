@@ -7,3 +7,5 @@ missileenv/bin/*
 missileenv/build
 
 missileenv/lib/*
+
+include/*
