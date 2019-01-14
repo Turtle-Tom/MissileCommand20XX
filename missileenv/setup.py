@@ -8,8 +8,7 @@ iconDisp = "art/usr_icon_line.ico"
 # fine tuning.
 buildOptions = dict(packages = ["sys", "os", "pygame", "codecs", "random"],
                     includes = ["missile_command", "end_screen", "level"],
-                    include_files = [("art/", "art/"), ("fonts/", "fonts/"),
-                        ("score_files/", "score_files/"), ("sounds/", "sounds/")],
+                    include_files = ["art/", "fonts/", "score_files/", "sounds/"],
                     excludes = ["Tcl", "Tkinter", "numpy"])
 
 base = None
