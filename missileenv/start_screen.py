@@ -29,7 +29,7 @@ window = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
 loadImg = pygame.image.load # To reduce lookup time
 tScale = pygame.transform.scale
     # Intro image
-introImg = loadImg("art/intro_background.png")
+introImg = loadImg("intro_background.png")
 introW = window.get_width()
 ratio = 1.0 + (introImg.get_width() / float(window.get_width()))
 introH = int(introImg.get_height() * (ratio))
@@ -38,8 +38,8 @@ introImgX = int(window.get_width()/2 - introImg.get_width()/2)
 introImgY = int(window.get_height()/2 - introImg.get_height()/2)
     # Console menu
 # Two images for flashing animation
-console1 = loadImg("art/console1.png")
-console2 = loadImg("art/console2.png")
+console1 = loadImg("console1.png")
+console2 = loadImg("console2.png")
 
 consoleSize = int(window.get_height())
 consoleX = int(window.get_width() / 2 - consoleSize / 2)
@@ -78,54 +78,54 @@ class Menu():
 
     # Audio
         # Main
-    # music = pygame.mixer.music.load('sounds/main.ogg')
-    music = pygame.mixer.Sound('sounds/console_trim.ogg')
+    # music = pygame.mixer.music.load('main.ogg')
+    music = pygame.mixer.Sound('console_trim.ogg')
     musicChannel = pygame.mixer.Channel(1)
         # Blip
-    blip = pygame.mixer.Sound("sounds/blip.ogg")
+    blip = pygame.mixer.Sound("blip.ogg")
     effectsChannel = pygame.mixer.Channel(2)
     effectsChannel.set_volume(effectsChannel.get_volume() / 3)
 
     # Intro screen
-    introFont1 = pygame.font.Font("fonts/space_age/space_age.ttf",
+    introFont1 = pygame.font.Font("space_age.ttf",
                     fontSize*5).render("MISSILE", True, BLACK)
     x1 = introImgX + int(introImg.get_width()/2) - int(introFont1.get_width()/2)
     y1 = introImgY + int(introImg.get_height()/3)
 
-    introFont2 = pygame.font.Font("fonts/space_age/space_age.ttf",
+    introFont2 = pygame.font.Font("space_age.ttf",
                     fontSize*5).render("COMMAND", True, BLACK)
     x2 = introImgX + int(introImg.get_width()/2) - int(introFont2.get_width()/2)
     y2 = y1 + introFont1.get_height() + fontSize
 
-    introFont3 = pygame.font.Font("fonts/space_age/space_age.ttf",
+    introFont3 = pygame.font.Font("space_age.ttf",
                     fontSize*6).render("20XX", True, BLACK)
     x3 = introImgX + int(introImg.get_width()/2) - int(introFont3.get_width()/2)
     y3 = y2 + introFont2.get_height() + fontSize
 
     # Menu selections
         # Start Game
-    startFont = pygame.font.Font("fonts/space_age/space_age.ttf",
+    startFont = pygame.font.Font("space_age.ttf",
                     fontSize).render("Start Mission", True, WHITE)
 
     startFontX = screenX + PADDING
     startFontY = screenY + PADDING
 
         # Settings
-    optionFont = pygame.font.Font("fonts/space_age/space_age.ttf",
+    optionFont = pygame.font.Font("space_age.ttf",
                     fontSize).render("Settings", True, WHITE)
 
     optionFontX = screenX + PADDING
     optionFontY = screenY + fontSize * 2 + PADDING
 
         # Scores
-    scoreFont = pygame.font.Font("fonts/space_age/space_age.ttf",
+    scoreFont = pygame.font.Font("space_age.ttf",
                     fontSize).render("High Scores", True, WHITE)
 
     scoreFontX = screenX + PADDING
     scoreFontY = screenY + fontSize * 4 + PADDING
 
         # Quit
-    quitFont = pygame.font.Font("fonts/space_age/space_age.ttf",
+    quitFont = pygame.font.Font("space_age.ttf",
                     fontSize).render("Quit", True, WHITE)
 
     quitFontX = screenX + PADDING
@@ -334,20 +334,20 @@ class Settings():
 
     # Settings selections
         # Menu
-    menuFont = pygame.font.Font("fonts/space_age/space_age.ttf",
+    menuFont = pygame.font.Font("space_age.ttf",
                     fontSize).render("Main Screen", True, WHITE)
 
     menuFontX = screenX + PADDING
     menuFontY = screenY + PADDING
 
         # Difficulty
-    diffFont = pygame.font.Font("fonts/space_age/space_age.ttf",
+    diffFont = pygame.font.Font("space_age.ttf",
                     fontSize).render("Difficulty:", True, WHITE)
-    diffFontE = pygame.font.Font("fonts/space_age/space_age.ttf",
+    diffFontE = pygame.font.Font("space_age.ttf",
                     fontSize).render("Easy", True, WHITE)
-    diffFontN = pygame.font.Font("fonts/space_age/space_age.ttf",
+    diffFontN = pygame.font.Font("space_age.ttf",
                     fontSize).render("Normal", True, WHITE)
-    diffFontH = pygame.font.Font("fonts/space_age/space_age.ttf",
+    diffFontH = pygame.font.Font("space_age.ttf",
                     fontSize).render("Hard", True, WHITE)
 
     diffFontX = screenX + PADDING
@@ -356,11 +356,11 @@ class Settings():
     diffOptionY = screenY + fontSize * 3 + PADDING
 
         # Controls
-    controlFont = pygame.font.Font("fonts/space_age/space_age.ttf",
+    controlFont = pygame.font.Font("space_age.ttf",
                     fontSize).render("Controls:", True, WHITE)
-    controlFontD = pygame.font.Font("fonts/space_age/space_age.ttf",
+    controlFontD = pygame.font.Font("space_age.ttf",
                     fontSize).render("Directional", True, WHITE)
-    controlFontI = pygame.font.Font("fonts/space_age/space_age.ttf",
+    controlFontI = pygame.font.Font("space_age.ttf",
                     fontSize).render("Inverted", True, WHITE)
 
     controlFontX = screenX + PADDING
@@ -369,11 +369,11 @@ class Settings():
     controlOptionY = screenY + fontSize * 5 + PADDING
 
         # Music
-    musicFont = pygame.font.Font("fonts/space_age/space_age.ttf",
+    musicFont = pygame.font.Font("space_age.ttf",
                                     fontSize).render("Music:", True, WHITE)
-    musicOn = pygame.font.Font("fonts/space_age/space_age.ttf",
+    musicOn = pygame.font.Font("space_age.ttf",
                                         fontSize).render("ON", True, WHITE)
-    musicOff = pygame.font.Font("fonts/space_age/space_age.ttf",
+    musicOff = pygame.font.Font("space_age.ttf",
                                         fontSize).render("OFF", True, WHITE)
 
     musicFontX = screenX + PADDING
@@ -382,11 +382,11 @@ class Settings():
     musicOptionY = screenY + fontSize * 7 + PADDING
 
         # Sound Effects
-    effectsFont = pygame.font.Font("fonts/space_age/space_age.ttf",
+    effectsFont = pygame.font.Font("space_age.ttf",
                                 fontSize).render("Effects:", True, WHITE)
-    effectsOn = pygame.font.Font("fonts/space_age/space_age.ttf",
+    effectsOn = pygame.font.Font("space_age.ttf",
                                         fontSize).render("ON", True, WHITE)
-    effectsOff = pygame.font.Font("fonts/space_age/space_age.ttf",
+    effectsOff = pygame.font.Font("space_age.ttf",
                                         fontSize).render("OFF", True, WHITE)
 
     effectsFontX = screenX + PADDING
@@ -616,7 +616,7 @@ class HighScores():
     board = pygame.Surface((boardWidth, boardHeight))
 
     # High Scores Font
-    scoreFont = pygame.font.Font("fonts/space_age/space_age.ttf", fontSize)
+    scoreFont = pygame.font.Font("space_age.ttf", fontSize)
     pygame.font.Font.set_underline(scoreFont, True)
     scoreFont = scoreFont.render("High Scores", True, WHITE)
 
@@ -624,15 +624,15 @@ class HighScores():
     scoreFontY = PADDING
 
     # Menu Font
-    menuFont = pygame.font.Font("fonts/space_age/space_age.ttf",
+    menuFont = pygame.font.Font("space_age.ttf",
                     int(fontSize * 0.75)).render("EXIT", True, WHITE)
 
     menuFontX = screenX + PADDING
     menuFontY = screenY + consoleScreen.get_height() - fontSize * 2
 
     # Arrows
-    arrowPlain = tScale(loadImg("art/arrow_plain.png"), (fontSize, fontSize))
-    arrowPress = tScale(loadImg("art/arrow_press.png"), (fontSize, fontSize))
+    arrowPlain = tScale(loadImg("arrow_plain.png"), (fontSize, fontSize))
+    arrowPress = tScale(loadImg("arrow_press.png"), (fontSize, fontSize))
         # Up
     arrowUpPlain = arrowPlain
     arrowUpPress = arrowPress
@@ -750,7 +750,7 @@ class HighScores():
                 line = self.scoreList[i]
                 lineStr = "%s: %d - %s" %(str(line[0]), int(line[1]), str(line[2]))
 
-                l = pygame.font.Font("fonts/space_age/space_age.ttf",
+                l = pygame.font.Font("space_age.ttf",
                             int(fontSize * 0.75)).render(lineStr, True, WHITE)
 
                 HighScores.board.blit(l, (PADDING, PADDING + fontSize * (i - lower)))
